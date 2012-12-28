@@ -49,7 +49,7 @@ func main() {
 		log.Fatalf("rdev.open: %v", err)
 	}
 	defer dev.Release()
-	dev.GetStorage(0)
+	dev.GetStorage(1)
 	for _, s := range dev.ListStorage() {
 		log.Printf("storage ID %d: %s", s.Id(), s.Description())
 	}
